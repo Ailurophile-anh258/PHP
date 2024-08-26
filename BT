@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+// Câu 4
+$chuoi = "Xin chào các bạn, chúng ta đang học PHP!";
+$chuoi_con = "PHP";
+
+// Tìm vị trí của chuỗi con
+$vi_tri = strpos($chuoi, $chuoi_con);
+
+if ($vi_tri !== false) {
+    echo "Chuỗi con 'PHP' được tìm thấy tại vị trí: " . $vi_tri;
+} else {
+    echo "Không tìm thấy chuỗi con";
+}
+
+//Câu 7
+$chuoi = "Xin chào các bạn!";
+// Chuyển đổi chuỗi thành chữ hoa
+$chuoi_hoa = strtoupper($chuoi);
+echo $chuoi_hoa;
+
+// Câu 9
+$chuoi = "xin chao cac ban!";
+$chuoi_in_hoa_dau = ucwords($chuoi);
+echo $chuoi_in_hoa_dau;
+
+// Câu 14
+$fruits = array("apple", "banana", "cherry");
+$fruits_string = implode(", ", $fruits);
+echo $fruits_string;
+
+// Câu 16
+$chuoi = "Xin chào các bạn, chúng ta đang học PHP!";
+$chuoi_con = "PHP";
+$ket_qua = strrchr($chuoi, $chuoi_con);
+if ($ket_qua === $chuoi_con) {
+    echo "Chuỗi kết thúc bằng '$chuoi_con'";
+} else {
+    echo "Chuỗi không kết thúc bằng '$chuoi_con'";
+}
+
+// Câu 17 
+$chuoi = "Xin chào các bạn, chúng ta đang học PHP!";
+$chuoi_con = "PHP";
+$ket_qua = strrchr($chuoi, $chuoi_con);
+if ($ket_qua === $chuoi_con) {
+    echo "Chuỗi kết thúc bằng '$chuoi_con'";
+} else {
+    echo "Chuỗi không kết thúc bằng '$chuoi_con'";
+}
+
+// Câu 18
+$email = "example@gmail.com";
+$email_clean = preg_replace("/[^a-zA-Z0-9.@]/", "", $email);
+echo $email_clean; 
+?>
+
